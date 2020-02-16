@@ -1,0 +1,22 @@
+.header {
+    height: 50vh;
+    color: #ffffff;
+    background-color: #00796B;
+}
+
+.image-holder {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 270px;
+    border-radius: 300px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}
+
+.image-holder > .picture {
+    width: 250px;
+    height: 250px;
+}
