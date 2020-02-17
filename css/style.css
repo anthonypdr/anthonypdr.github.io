@@ -71,6 +71,7 @@ body {
 	padding: 20px;
 }
 .container-fluid > .prj > .col-sm > .card {
+    height: 300px;
     margin: 5px;
 }
 
