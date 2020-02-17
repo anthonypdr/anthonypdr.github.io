@@ -1,19 +1,19 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     h1 {
-        font-size: 60px;
+        font-size: 35px;
     }
 
     h2{
-        font-size: 50px;
+        font-size: 25px;
     }
 
     h3 {
-        font-size: 40px;
+        font-size: 15px;
     }
 
     h4 {
-        font-size: 30px;
+        font-size: 10px;
     }
     
     .row {
@@ -41,19 +41,19 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
     h1 {
-        font-size: 60px;
+        font-size: 35px;
     }
 
     h2{
-        font-size: 50px;
+        font-size: 25px;
     }
 
     h3 {
-        font-size: 40px;
+        font-size: 15px;
     }
 
     h4 {
-        font-size: 30px;
+        font-size: 10px;
     }
 
     .row {
@@ -81,19 +81,19 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 60px;
+        font-size: 35px;
     }
 
     h2{
-        font-size: 50px;
+        font-size: 25px;
     }
 
     h3 {
-        font-size: 40px;
+        font-size: 15px;
     }
 
     h4 {
-        font-size: 30px;
+        font-size: 10px;
     }
     
     .row {
