@@ -46,7 +46,7 @@ body {
 }
 
 .skills {
-	height: 630px;
+    padding: 50px;
 	color: #ffffff;
 	background-color: rgb(26,29,34);
 }
@@ -69,6 +69,17 @@ body {
 
 .container-fluid > .prj {
 	padding: 20px;
+}
+.container-fluid > .prj > .col-sm > .card {
+    margin: 5px;
+}
+
+.container-fluid > .prj > .col-sm > .card > .card-img-top {
+    height: 200px;
+}
+
+.container-fluid > .prj > .col-sm > .card > .card-body {
+    height: 100px;
 }
 
 .footer {
