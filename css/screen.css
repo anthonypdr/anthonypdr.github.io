@@ -1,24 +1,120 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+    
     .row {
         display: flex;
         flex-direction: column;
+    }
+
+    .container-fluid > .prj > .col-sm > .card {
+        height: 300px;
+        width: 400px;
+        margin: 5px;
+    }
+    
+    .container-fluid > .prj > .col-sm > .card > .card-img-top {
+        height: 200px;
+        width: 400px;
+    }
+    
+    .container-fluid > .prj > .col-sm > .card > .card-body {
+        height: 100px;
+        width: 400px;
     }
 }
   
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
     .row {
         display: flex;
         flex-direction: column;
     }
+
+    .container-fluid > .prj > .col-sm > .card {
+        height: 300px;
+        width: 400px;
+        margin: 5px;
+    }
+    
+    .container-fluid > .prj > .col-sm > .card > .card-img-top {
+        height: 200px;
+        width: 400px;
+    }
+    
+    .container-fluid > .prj > .col-sm > .card > .card-body {
+        height: 100px;
+        width: 400px;
+    }
 }
   
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+    
     .row {
         display: flex;
         flex-direction: column;
+    }
+
+    .container-fluid > .prj > .col-sm > .card {
+        height: 300px;
+        width: 400px;
+        margin: 5px;
+    }
+    
+    .container-fluid > .prj > .col-sm > .card > .card-img-top {
+        height: 200px;
+        width: 400px;
+    }
+    
+    .container-fluid > .prj > .col-sm > .card > .card-body {
+        height: 100px;
+        width: 400px;
     }
 } 
   
