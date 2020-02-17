@@ -1,5 +1,9 @@
 @import "screen.css";
 
+body {
+	overflow-x: hidden;
+}
+
 .header {
     height: 300px;
     color: #ffffff;
@@ -7,7 +11,7 @@
 }
 
 .image-holder {
-    margin-top: -160px;
+    margin-top: -135px;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -29,14 +33,45 @@
     text-align: justify;
 }
 
-.container > .row > .col > .h1 {
-    margin: auto;
-}
-
 .separator {
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #000000;
+}
+
+.jumbotron {
+	margin: 0;
+}
+
+.skills {
+	height: 630px;
+	color: #ffffff;
+	background-color: rgb(26,29,34);
+}
+
+.progress {
+	height: 50px;
+}
+
+.progress-bar {
+	background-color: #00796B;
+}
+
+.prg {
+	padding: 10px;
+}
+
+.container-fluid {
+	padding: 50px;
+}
+
+.container-fluid > .prj {
+	padding: 20px;
+}
+
+.footer {
+	color: #ffffff;
+	background-color: #004D40;
 }
