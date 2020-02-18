@@ -28,7 +28,7 @@ body {
     height: 250px;
 }
 
-.container > .row > .col {  
+.container > .skl > .col {  
     padding: 30px;
     text-align: justify;
 }
