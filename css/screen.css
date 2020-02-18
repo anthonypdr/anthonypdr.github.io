@@ -23,7 +23,7 @@
 
     .container-fluid > .prj > .col-sm > .card {
         height: 300px;
-        margin: 5px;
+        margin-bottom: 5px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-img-top {
@@ -64,7 +64,7 @@
 
     .container-fluid > .prj > .col-sm > .card {
         height: 300px;
-        margin: 5px;
+        margin-bottom: 5px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-img-top {
@@ -105,7 +105,7 @@
 
     .container-fluid > .prj > .col-sm > .card {
         height: 300px;
-        margin: 5px;
+        margin-bottom: 5px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-img-top {
