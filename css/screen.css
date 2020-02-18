@@ -23,18 +23,19 @@
 
     .container-fluid > .prj > .col-sm > .card {
         height: 300px;
-        width: 400px;
         margin: 5px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-img-top {
         height: 200px;
-        width: 400px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-body {
         height: 100px;
-        width: 400px;
+    }
+
+    .contactme {
+        font-size: 10px;
     }
 }
   
@@ -63,18 +64,19 @@
 
     .container-fluid > .prj > .col-sm > .card {
         height: 300px;
-        width: 400px;
         margin: 5px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-img-top {
         height: 200px;
-        width: 400px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-body {
         height: 100px;
-        width: 400px;
+    }
+
+    .contactme {
+        font-size: 10px;
     }
 }
   
@@ -103,18 +105,19 @@
 
     .container-fluid > .prj > .col-sm > .card {
         height: 300px;
-        width: 400px;
         margin: 5px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-img-top {
         height: 200px;
-        width: 400px;
     }
     
     .container-fluid > .prj > .col-sm > .card > .card-body {
         height: 100px;
-        width: 400px;
+    }
+    
+    .contactme {
+        font-size: 10px;
     }
 } 
   
