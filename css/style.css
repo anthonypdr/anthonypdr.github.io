@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron:wght@700&display=swap');
+
+body { 
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #181B1E;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #181B1E;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #448C74;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Orbitron', sans-serif !important; 
+    text-transform: uppercase;
+}
+
+h2 { font-size: 40px; }
+
+h3 { font-size: 20px; }
+
+
+p, span, div, section { color: #ffffff; }
+
+img { 
+    width: 100%;
+    height: 100%;
+}
+
+.bg-dark { background-color: #121519 !important; }
+
+.bg-light-dark { background-color: #1e2125 !important; }
+
+.navbar-brand { 
+    color: #448C74;
+    font-size: 26px;
+}
+
+.navbar-brand:hover { color: #448C74; }
+
+.navbar .container { padding: 0 25px 0 40px; }
+
+.nav-item { margin: 0 15px 0 15px; }
+
+.nav-item .active { color: #448C74 !important; }
+
+.nav-item:last-child .nav-link { padding-right: 0 !important; }
+
+section {
+    height: 94vh;
+    display: flex;
+    align-items: center;
+}
+
+.row { align-items: center; }
+
+.col { padding: 0 40px; }
+
+#hero {
+    background-color: #448C74;
+    background-image: url('/assets/pattern.png');
+    background-attachment: fixed;
+}
+
+#hero .container { 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero h1 { text-align: center; }
+
+.primary-title {
+    display: block;
+    font-size: 120px;
+}
+
+.secondary-title {
+    display: block;
+    font-size: 50px;
+    letter-spacing: 7px;
+}
+
+#about .img-holder:first-child {
+    height: 100%;
+    background-color: #448C74;
+    border-radius: 20px;
+
+}
+
+#about .img-holder:first-child img {
+    z-index: 2;
+    margin: 0 0 0 -20px;
+    width: 106%;
+}
+
+#skills .col-8 .col {
+    background-color: #1E2125;
+    margin: 10px 10px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.skills-img { 
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.skills-icons {
+    width: 40px;
+    height: 40px;
+}
