@@ -153,6 +153,17 @@ section {
 
 .modal h2 { width: 100%; }
 
+.modal-footer { 
+    justify-content: center;
+}
+
+.modal .back-nav { width: 200px; }
+
+.modal .img-nav { 
+    width: 50px !important;
+    padding: 10px 10px !important;
+}
+
 .img-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
