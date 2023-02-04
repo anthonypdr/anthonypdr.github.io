@@ -155,13 +155,19 @@ section {
 
 .img-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 20px;
 }
 
 .img-gallery img {
     width: 100%;
     cursor: pointer;
+}
+
+.img-gallery img:hover {
+    border: 1px solid #e9c02b;
+    scale: 1.05;
+    transition: ease-in 230ms;
 }
 
 .img-thumbnail { padding: 0 !important; }
@@ -176,7 +182,7 @@ section {
 .btn-trigger { display: none; }
 
 .website-display { 
-    margin-top: 240px;
+    margin-top: 23%;
     background-color: #448C74;
     width: 95%;
     border-radius: 20px;
@@ -185,7 +191,7 @@ section {
  }
 
 .website-display img { 
-    width: 80%;
+    width: 90%;
     height: auto;
     z-index: 2;
     position: relative;
