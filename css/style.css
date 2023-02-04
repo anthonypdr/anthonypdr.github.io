@@ -175,7 +175,7 @@ section {
 
 .btn-trigger { display: none; }
 
-.website-display { margin-top: 20%; }
+.website-display { margin-top: 20% !important; }
 
 .website-display .horizontal-background {
     background-color: #448C74;
