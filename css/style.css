@@ -46,6 +46,23 @@ img {
 
 .bg-light-dark { background-color: #1e2125 !important; }
 
+.btn { 
+    width: 250px;
+    padding: 10px 20px;
+ }
+ .btn-primary {
+    background-color: #e9c02b;
+    border: 2px solid #e9c02b !important;
+    color: #121519;
+    font-weight: 700;
+    border-radius: 100px;
+ }
+
+ .btn-primary:hover {
+    background: none;
+    color: #e9c02b;;
+ }
+
 .navbar-brand { 
     color: #448C74;
     font-size: 26px;
@@ -67,7 +84,10 @@ section {
     align-items: center;
 }
 
-.row { align-items: center; }
+.row { 
+    display: flex;
+    justify-content: center;
+ }
 
 .col { padding: 0 40px; }
 
@@ -128,3 +148,27 @@ section {
     width: 40px;
     height: 40px;
 }
+
+.modal h2 { width: 100%; }
+
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.img-gallery img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.img-thumbnail { padding: 0 !important; }
+
+.btn-close { 
+    background: none;
+    color: #ffffff;
+}
+
+.btn-close:hover { color: #e9c02b; }
+
+.btn-trigger { display: none; }
