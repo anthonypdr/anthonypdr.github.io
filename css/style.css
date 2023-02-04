@@ -54,13 +54,13 @@ img {
     background-color: #e9c02b;
     border: 2px solid #e9c02b !important;
     color: #121519;
-    font-weight: 700;
+    font-weight: 700 !important;
     border-radius: 100px;
  }
 
- .btn-primary:hover {
-    background: none;
-    color: #e9c02b;;
+ .btn-primary:hover , .btn-primary:focus-visible {
+    background: none !important;
+    color: #e9c02b;
  }
 
 .navbar-brand { 
@@ -149,6 +149,8 @@ section {
     height: 40px;
 }
 
+#portfolio p { padding-bottom: 20px; }
+
 .modal h2 { width: 100%; }
 
 .img-gallery {
@@ -172,3 +174,20 @@ section {
 .btn-close:hover { color: #e9c02b; }
 
 .btn-trigger { display: none; }
+
+.website-display { margin-top: 20%; }
+
+.website-display .horizontal-background {
+    background-color: #448C74;
+    width: 95%;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.website-display img { 
+    width: 70%;
+    height: auto;
+    z-index: 2;
+    position: absolute;
+    margin-top: -210px;
+}
