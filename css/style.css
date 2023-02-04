@@ -176,20 +176,18 @@ section {
 .btn-trigger { display: none; }
 
 .website-display { 
-    margin-top: 20%;
+    margin-top: 240px;
     background-color: #448C74;
     width: 95%;
-    height: 150px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    bottom: 0;
  }
 
 .website-display img { 
-    width: 70%;
+    width: 80%;
     height: auto;
     z-index: 2;
-    position: absolute;
-    margin-top: -219px;
+    position: relative;
+    margin-top: -200px;
 }
