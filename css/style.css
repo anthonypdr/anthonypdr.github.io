@@ -175,19 +175,21 @@ section {
 
 .btn-trigger { display: none; }
 
-.website-display { margin-top: 20% !important; }
-
-.website-display .horizontal-background {
+.website-display { 
+    margin-top: 20%;
     background-color: #448C74;
     width: 95%;
     height: 150px;
     border-radius: 20px;
-}
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+ }
 
 .website-display img { 
     width: 70%;
     height: auto;
     z-index: 2;
     position: absolute;
-    margin-top: -210px;
+    margin-top: -219px;
 }
