@@ -49,18 +49,32 @@ img {
 .btn { 
     width: 250px;
     padding: 10px 20px;
- }
- .btn-primary {
+}
+
+.btn-primary {
     background-color: #e9c02b;
     border: 2px solid #e9c02b !important;
     color: #121519;
     font-weight: 700 !important;
     border-radius: 100px;
+}
+
+.btn-primary:hover , .btn-primary:focus-visible {
+    background: none !important;
+    color: #e9c02b !important;
+}
+
+.btn-primary-reverse {
+    background: none !important;
+    border: 2px solid #e9c02b !important;
+    color: #e9c02b !important;
+    font-weight: 700 !important;
+    border-radius: 100px;
  }
 
- .btn-primary:hover , .btn-primary:focus-visible {
-    background: none !important;
-    color: #e9c02b;
+ .btn-primary-reverse:hover , .btn-primary-reverse:focus-visible {
+    background-color: #e9c02b !important;
+    color: #121519 !important;
  }
 
 .navbar-brand { 
