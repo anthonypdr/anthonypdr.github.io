@@ -25,6 +25,8 @@ function goPrev(){
         imageID = imageID - 1;
         setImage(imageID);
     }
+
+    scrollModalToTop();
 }
 
 function goNext(){
@@ -35,8 +37,14 @@ function goNext(){
         imageID = imageID + 1;
         setImage(imageID);
     }
+
+    scrollModalToTop();
 }
 
 function setImage(id){
     document.getElementById("previewImage").src = "/assets/websites/Sample "+id+".jpg";
+}
+
+function scrollModalToTop(){
+   $(".modal-body").scrollTop(0);
 }
