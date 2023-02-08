@@ -46,5 +46,7 @@ function setImage(id){
 }
 
 function scrollModalToTop(){
-   $(".modal-body").scrollTop(0);
+    $(".modal-body").scrollTop(0);
+    $(".modal-body").fadeOut(0);
+    $(".modal-body").fadeIn(1000);
 }
