@@ -1,2 +1,2 @@
 # anthonypdr.github.io
-My Portfolio Site
+This is a portfolio site I created using HTML, CSS, JS and Bootstrap to showcase my previous works sd s Web Designer. Feel free to use it as a template :D (Except for the images under Portfolio section ofcourse -_-)
