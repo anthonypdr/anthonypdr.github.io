@@ -30,7 +30,6 @@ function goPrev(){
 }
 
 function goNext(){
-    $(".modal-body").fadeOut(0);
     if(imageID == 51){
         imageID = imageID - 50;
         setImage(imageID);
@@ -44,7 +43,6 @@ function goNext(){
 
 function setImage(id){
     document.getElementById("previewImage").src = "/assets/websites/Sample "+id+".jpg";
-    $(".modal-body").fadeIn("fast");
 }
 
 function scrollModalToTop(){
