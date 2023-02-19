@@ -25,6 +25,9 @@ body {
 	background-color: #448C74;
 }
 
+a { color: #ffffff; text-decoration: none; }
+a:hover { color: #448C74; }
+
 h1, h2, h3, h4, h5, h6, .navbar-brand {
     display: block;
     font-family: 'Orbitron', sans-serif !important; 
@@ -104,6 +107,7 @@ section {
 .row { 
     display: flex;
     justify-content: center;
+    align-items: center;
  }
 
 .col { padding: 0 40px; }
@@ -159,14 +163,20 @@ section {
 }
 
 .skills-img { 
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 20px;
 }
 
 .skills-icons {
     width: 40px;
     height: 40px;
+}
+
+.skills-icons:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 3ms;
 }
 
 #portfolio, #about { background-image: url('/assets/row-pattern.png'); }
@@ -237,3 +247,13 @@ section {
     object-fit: contain;
     object-position: left;
 }
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.fa-envelope { 
+    margin-right: 10px; 
+    color: #448C74;
+} 

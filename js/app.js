@@ -2,6 +2,8 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 let imageID;
+let maxPreviewImage = 50;
+let minPreviewImage = 1;
 
 function previewImage(image){
     let source = image.src;
@@ -18,33 +20,26 @@ function previewImage(image){
 }
 
 function goPrev(){
-    if(imageID == 1){
-        imageID = imageID + 50;
+    if(imageID == minPreviewImage){
+        imageID = imageID + maxPreviewImage;
         setImage(imageID);
     }else {
-        imageID = imageID - 1;
+        imageID = imageID - minPreviewImage;
         setImage(imageID);
     }
-
-    scrollModalToTop();
 }
 
 function goNext(){
-    if(imageID == 51){
-        imageID = imageID - 50;
+    if(imageID == maxPreviewImage + 1){
+        imageID = imageID - maxPreviewImage;
         setImage(imageID);
     }else {
-        imageID = imageID + 1;
+        imageID = imageID + minPreviewImage;
         setImage(imageID);
     }
-
-    scrollModalToTop();
 }
 
 function setImage(id){
-    document.getElementById("previewImage").src = "/assets/websites/Sample "+id+".jpg";
-}
-
-function scrollModalToTop(){
     $(".modal-body").scrollTop(0);
+    document.getElementById("previewImage").src = "/assets/websites/Sample "+id+".jpg";
 }
