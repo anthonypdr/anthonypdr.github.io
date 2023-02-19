@@ -248,6 +248,10 @@ section {
     object-position: left;
 }
 
+#contact svg{ 
+    color: #121519;
+}
+
 .contact-info {
     display: flex;
     align-items: center;
@@ -265,10 +269,6 @@ section {
 .contact-info .icon-wrapper{
     padding: 10px;
     margin-right: 15px;
-}
-
-svg{ 
-    color: #121519;
 }
 
 .social-media{
