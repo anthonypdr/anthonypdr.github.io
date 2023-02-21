@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     text-transform: uppercase;
 }
 
-h2 { font-size: 40px; }
+h2 { font-size: 50px; }
 
 h3 { font-size: 20px; }
 
@@ -142,16 +142,20 @@ section {
 }
 
 #about .img-holder:first-child {
+    display: grid;
+    align-items: end;
     height: 100%;
     background-color: #448C74;
     border-radius: 20px;
-
+    height: 600px;
 }
 
 #about .img-holder:first-child img {
     z-index: 2;
     margin: 0 0 0 -20px;
     width: 106%;
+    height: auto;
+    bottom: 0;
 }
 
 #skills .col-8 .col {
@@ -163,20 +167,20 @@ section {
 }
 
 .skills-img { 
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 20px;
 }
 
 .skills-icons {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .skills-icons:hover {
     cursor: pointer;
     transform: scale(1.1);
-    transition: transform 3ms;
+    transition: transform 300ms;
 }
 
 #portfolio, #about { background-image: url('/assets/row-pattern.png'); }
@@ -296,5 +300,5 @@ section {
  }
 
  .social-media .icon-wrapper:hover svg{
-    color: #e9c02b;
+    color: #e9c02b !important;
 }
