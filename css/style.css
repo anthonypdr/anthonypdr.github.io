@@ -26,7 +26,12 @@ body {
 }
 
 a { color: #ffffff; text-decoration: none; }
-a:hover { color: #448C74; }
+
+a:hover, footer a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: #448C74 !important;
+}
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
     display: block;
@@ -187,11 +192,7 @@ section {
 
 #portfolio p { padding-bottom: 20px; }
 
-.modal h2 { width: 100%; }
-
-.modal-footer { 
-    justify-content: center;
-}
+.modal-footer { justify-content: center; }
 
 .modal .back-nav { width: 200px; }
 
@@ -252,9 +253,7 @@ section {
     object-position: left;
 }
 
-#contact svg{ 
-    color: #121519;
-}
+#contact svg{ color: #121519; }
 
 .contact-info {
     display: flex;
@@ -280,9 +279,7 @@ section {
     display: flex;
 }
 
-.social-media a{
-    margin: 0 15px 0 0;
-}
+.social-media a{ margin: 0 15px 0 0; }
 
 .social-media .icon-wrapper{
     background-color: #e9c02b;
@@ -290,15 +287,23 @@ section {
     border: 2px solid #e9c02b;
 }
 
-.social-media .icon-wrapper:hover{
-    background-color: #121519;
-}
+.social-media .icon-wrapper:hover{ background-color: #121519; }
 
 .social-media .icon-wrapper svg{
     width: 30px;
     height: 30px;
  }
 
- .social-media .icon-wrapper:hover svg{
-    color: #e9c02b !important;
+ .social-media .icon-wrapper:hover svg{ color: #e9c02b !important; }
+
+footer .row{ padding: 20px 25px; }
+
+footer a{ text-decoration: underline; }
+
+footer .col-6, footer a{
+    font-size: 14px;
+    font-weight: 700;
+    color: #646668 !important;
 }
+
+footer .col-6:last-child{ text-align: right; }
