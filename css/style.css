@@ -25,7 +25,7 @@ body {
     width: 800px;
     height: 500px;
     background-color: #300924;
-    border-radius: 10px 10px;
+    border-radius: 15px 15px 0 0;
     border: 1px solid #210615;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
 }
@@ -41,10 +41,11 @@ body {
     border-radius: 10px 10px 0 0;
 }
 
-.title-bar .left, .title-bar .right { width: 40%; }
+.title-bar .left, .title-bar .right { width: 30%; }
 
 .title-bar .center { 
-    width: 20%;
+    width: 40%;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -65,8 +66,13 @@ body {
 }
 
 .right .icons {
-    padding: 5px 5px 2px 5px;
-    margin: 5px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 5px 8px;
     border-radius: 50px;
 }
 
@@ -78,4 +84,11 @@ body {
 .right .icon {
     width: 12px;
     height: 12px;
+}
+
+.right .icon.min { margin: 2px 0 -2px 0; }
+
+.right .icon.max {
+    width: 10px !important;
+    height: 10px !important;
 }
