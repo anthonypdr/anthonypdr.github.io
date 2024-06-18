@@ -1,4 +1,5 @@
 // DOM elements
+const terminal = document.getElementById('terminal');
 const outputDiv = document.getElementById('output');
 const commandForm = document.getElementById('commandForm');
 const commandInput = document.getElementById('commandInput');
@@ -65,7 +66,8 @@ function processCommand(command) {
 // Function to display output in the terminal
 function displayOutput(output) {
     outputDiv.textContent += '> ' + output + '\n';
-    outputDiv.scrollTop = outputDiv.scrollHeight; // Scroll to bottom
+    outputDiv.scrollTop = outputDiv.scrollHeight;
+    terminal.scrollTop = terminal.scrollHeight;// Scroll to bottom
 }
 
 // Initial greeting message

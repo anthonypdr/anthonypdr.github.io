@@ -7,7 +7,30 @@
     --shadow: rgba(0, 0, 0, 0.3);
     --text: #d7d7d7;
     --user: #8AE234;
+    --scrollBar: #d7d7d786;
+    --scrollBarHover: #d7d7d7;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollBar);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollBarHover)
+  }
 
 body {
     margin: 0;
@@ -106,8 +129,9 @@ body {
 }
 
 .terminal { 
-    height: 100%;
+    height: 450px;
     line-height: 1.6;
+    overflow-y: scroll;
 }
 
 .terminal pre { line-height: 1.2; }
