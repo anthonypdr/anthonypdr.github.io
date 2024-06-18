@@ -16,7 +16,7 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--text);
 }
 
@@ -105,26 +105,39 @@ body {
     height: 10px !important;
 }
 
-.console { 
+.terminal { 
     height: 100%;
     line-height: 1.6;
 }
 
-.console pre { line-height: 1.2; }
+.terminal pre { line-height: 1.2; }
 
-.command-line .user { color: var(--user); }
-
-.command-line #carret {
-    width: calc(100% - 10em);
-    background-color: var(--primary);
-    border: none;
-    outline: none;
-    color: var(--text);
+.output {
+    padding: 10px;
+    overflow-y: auto;
+    white-space: pre-wrap;
 }
 
+.user { color: var(--user); }
 
-.console:hover,
-.command-line #carret:focus,
-.command-line #carret:hover {
-    cursor: default;
+form { display: flex; }
+
+form input[type="text"] {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    width: calc(100% - 50px);
+    outline: none;
+}
+
+form input[type="text"]:focus {
+    border: none;
+}
+
+input[type="submit"] {
+    display: none;
 }
