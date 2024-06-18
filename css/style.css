@@ -1,3 +1,14 @@
+:root {
+    --primary: #300924;
+    --secondary: #222222;
+    --containerBorder: #210615;
+    --titleBarTopBorder: #2d2b2c;
+    --titleBarBottomBorder: #1e171f;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --text: #d7d7d7;
+    --user: #8AE234;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +17,7 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 12px;
-    color: #d7d7d7;
+    color: var(--text);
 }
 
 .desktop-bg {
@@ -24,10 +35,11 @@ body {
 .container {
     width: 800px;
     height: 500px;
-    background-color: #300924;
+    margin: 0 20px;
+    background-color: var(--primary);
     border-radius: 15px 15px 0 0;
-    border: 1px solid #210615;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+    border: 1px solid --containerBorder;
+    box-shadow: var(--shadow) 0px 8px 24px;
 }
 
 .title-bar {
@@ -35,9 +47,9 @@ body {
     justify-content:space-between;
     align-items: center;
     padding: 5px 5px;
-    background-color: #222222;
-    border-top: 1px solid #2d2b2c;
-    border-bottom: 1px solid #1e171f;
+    background-color: var(--secondary);
+    border-top: 1px solid var(--titleBarTopBorder);
+    border-bottom: 1px solid var(--titleBarBottomBorder);
     border-radius: 10px 10px 0 0;
 }
 
@@ -91,4 +103,28 @@ body {
 .right .icon.max {
     width: 10px !important;
     height: 10px !important;
+}
+
+.console { 
+    height: 100%;
+    line-height: 1.6;
+}
+
+.console pre { line-height: 1.2; }
+
+.command-line .user { color: var(--user); }
+
+.command-line #carret {
+    width: calc(100% - 10em);
+    background-color: var(--primary);
+    border: none;
+    outline: none;
+    color: var(--text);
+}
+
+
+.console:hover,
+.command-line #carret:focus,
+.command-line #carret:hover {
+    cursor: default;
 }

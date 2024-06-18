@@ -16,17 +16,31 @@
                 <div class="left">
                     <div class="icons"><img src="/assets/icons/ic-tab.png" alt="tab" class="icon tab"></div>
                 </div>
-                <div class="center">admin@terminal: ~</div>
+                <div class="center">user@terminal: ~</div>
                 <div class="right">
                     <div class="icons"><img src="/assets/icons/ic-minimize.png" alt="min" class="icon min"></div>
                     <div class="icons"><img src="/assets/icons/ic-maximize.png" alt="max" class="icon max"></div>
                     <div class="icons"><img src="/assets/icons/ic-close.png" alt="close" class="icon close"></div>
                 </div>
             </div>
-            <div class="console">
-                Welcome to my Sub Portfolio
+            <div class="console" onclick="focusInput()">
+<pre>
+  ________                      __  .__                     ._.
+ /  _____/______   ____   _____/  |_|__| ____    ____  _____| |
+/   \  __\_  __ \_/ __ \_/ __ \   __\  |/    \  / ___\/  ___/ |
+\    \_\  \  | \/\  ___/\  ___/|  | |  |   |  \/ /_/  >___ \ \|
+ \______  /__|    \___  >\___  >__| |__|___|  /\___  /____  >__
+        \/            \/     \/             \//_____/     \/ \/
+</pre>
+                Welcome to my Sub Portfolio, here you can browse about me and projects I recently&nbsp;created.<br/>
+                To begin navigating, input "help" to display the list of commands&nbsp;available.<br/>
+                <div class="command-line">
+                    <span class="user">user@terminal</span>:~$ <span id="output"></span><input type="text" name="carret" id="carret" autofocus>
+                </div>
             </div>
         </div>
     </div>
+    <!--Custom Script-->
+    <script src="/js/script.js"></script>
 </body>
 </html>
