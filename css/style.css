@@ -1,167 +1,278 @@
-:root {
-    --primary: #300924;
-    --secondary: #222222;
-    --containerBorder: #210615;
-    --titleBarTopBorder: #2d2b2c;
-    --titleBarBottomBorder: #1e171f;
-    --shadow: rgba(0, 0, 0, 0.3);
-    --text: #d7d7d7;
-    --user: #8AE234;
-    --scrollBar: #d7d7d786;
-    --scrollBarHover: #d7d7d7;
+/* IMPORT LOCAL FONTS */
+@font-face {
+    font-family: 'Space Mono';
+    src: url('assets/fonts/SpaceMono-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--scrollBar);
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollBarHover)
-  }
+@font-face {
+    font-family: 'Space Mono';
+    src: url('assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 
-body {
+/* CSS VARIABLES - CUSTOM TERMINAL THEME */
+:root {
+    --bg-main: #101010; /* Soft Black */
+    --bg-card: #1a1a1a; /* Lighter Black */
+    --text-main: #e0e0e0; 
+    --text-muted: #888888;
+    --accent: #8ae234; /* Custom Retro Green */
+    --accent-glow: rgba(138, 226, 52, 0.4);
+    --border-color: #222222; 
+}
+
+/* BASE STYLES */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    color: var(--text);
 }
 
-.desktop-bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+body {
+    font-family: 'Space Mono', monospace; 
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 8px var(--accent-glow);
+}
+
+h1, h2, h3 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: var(--accent); 
+}
+
+/* --- THE GRID BACKGROUND --- */
+.bg-grid {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: 
+        linear-gradient(rgba(138, 226, 52, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(138, 226, 52, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.1s linear;
+}
+
+/* --- DARK OVERLAY --- */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
-    background-image: url('/assets/ubuntu-wallpaper.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: 100% 100%;
+    background: radial-gradient(circle at center, transparent 0%, var(--bg-main) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- ELECTRON CANVAS --- */
+#electron-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .container {
-    width: 800px;
-    height: 500px;
-    margin: 0 20px;
-    background-color: var(--primary);
-    border-radius: 15px 15px 0 0;
-    border: 1px solid --containerBorder;
-    box-shadow: var(--shadow) 0px 8px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
 }
 
-.title-bar {
+/* NAVIGATION */
+nav {
+    padding: 2rem 0;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    padding: 5px 5px;
-    background-color: var(--secondary);
-    border-top: 1px solid var(--titleBarTopBorder);
-    border-bottom: 1px solid var(--titleBarBottomBorder);
-    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.title-bar .left, .title-bar .right { width: 30%; }
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
 
-.title-bar .center { 
-    width: 40%;
-    font-weight: 500;
+.logo span {
+    color: var(--accent);
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 6rem 0;
+    text-align: left;
+}
+
+.hero p.greeting {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(138, 226, 52, 0.2);
+}
+
+.hero p.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--bg-main);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(138, 226, 52, 0.15);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* SKILLS SECTION */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.section-title::before {
+    content: "root@portfolio:~#";
+    color: var(--text-muted);
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.section-title::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--border-color);
+    margin-left: 20px;
+}
+
+.skills {
+    padding: 4rem 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 5px 20px var(--accent-glow);
+}
+
+.card-icon {
+    margin-bottom: 1rem;
+    color: var(--accent);
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.card-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+/* CONTACT SECTION */
+.contact {
+    padding: 6rem 0;
     text-align: center;
 }
 
-.title-bar .right {
-    display: flex;
-    justify-content: flex-end;
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-.icons { 
+.contact p {
+    color: var(--text-main);
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* TYPEWRITER EFFECT CURSOR */
+.cursor {
     display: inline-block;
-    background-color: #373737;
-}
-
-.left .icons { 
-    border: 1px solid #1b1b1b;
-    border-radius: 5px;
-    padding: 8px;
-}
-
-.right .icons {
-    width: 16px;
-    height: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px;
-    margin: 5px 8px;
-    border-radius: 50px;
-}
-
-.left .icon {
-    width: 16px;
-    height: 16px;
-}
-
-.right .icon {
     width: 12px;
-    height: 12px;
+    height: 1.1em;
+    background-color: var(--accent);
+    vertical-align: bottom;
+    animation: blink 1s step-end infinite;
 }
 
-.right .icon.min { margin: 2px 0 -2px 0; }
-
-.right .icon.max {
-    width: 10px !important;
-    height: 10px !important;
-}
-
-.terminal { 
-    height: 450px;
-    line-height: 1.6;
-    overflow-y: scroll;
-}
-
-.terminal pre { line-height: 1.2; }
-
-.output {
-    padding: 10px;
-    overflow-y: auto;
-    white-space: pre-wrap;
-}
-
-.user { color: var(--user); }
-
-form { display: flex; }
-
-form input[type="text"] {
-    background: none;
-    border: none;
-    color: var(--text);
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    width: calc(100% - 50px);
-    outline: none;
-}
-
-form input[type="text"]:focus {
-    border: none;
-}
-
-input[type="submit"] {
-    display: none;
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
